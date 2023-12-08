@@ -6,6 +6,7 @@ import { TechBanner } from "./components/TechBanner"
 import { GlobalStyle } from "./styles/global"
 import { ResetStyle } from './styles/reset'
 
+
 function App() {
   // const [count, setCount] = useState(0)
 

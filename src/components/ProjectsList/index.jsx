@@ -1,57 +1,75 @@
-import { StyledContainer, StyledProjectsSection } from "./styles"
+import { useEffect, useState } from "react";
+import { ProjectCard } from "../ProjectCard";
+import {
+  StyledContainer,
+  StyledIdeaDiv,
+  StyledLink,
+  StyledProjectList,
+  StyledProjectsSection,
+  StyledTitle,
+} from "./styles";
 
 export const ProjectsSection = () => {
-    return (
-       <StyledProjectsSection>
-        <StyledContainer>
-            <div>
-                <h3>Vamos trocar uma idéia?</h3>
-                <p>Se você estiver interessado em explorar como posso contribuir para o seu sucesso ou se simplesmente quiser se conectar e discutir oportunidades interessantes em tecnologia ou segurança cibernética, não hesite em entrar em contato. Vamos embarcar nessa jornada juntos! </p>
-                <button>Accessar perfil no LinkedIn</button>
-            </div>
-            <div>
-                <h3>Projetos</h3>
-                <p>Originalidade e <span>dedicção</span> em cada detalhe</p>
-                <ul>
-                    <li>
-                        <h3>Título do Projeto</h3>
-                        <div>
-                            <p>Linguagens:</p>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto maxime eligendi dolorem quibusdam quam quo! Modi libero ea voluptatum commodi laboriosam sed sequi dolores cupiditate labore voluptate, beatae earum ad?</p>
-                        <span>Github Code</span>
-                        <span>Aplicação</span>
-                    </li>
-                    <li>
-                        <h3>Título do Projeto</h3>
-                        <div>
-                            <p>Linguagens:</p>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto maxime eligendi dolorem quibusdam quam quo! Modi libero ea voluptatum commodi laboriosam sed sequi dolores cupiditate labore voluptate, beatae earum ad?</p>
-                        <span>Github Code</span>
-                        <span>Aplicação</span>
-                    </li>
-                    <li>
-                        <h3>Título do Projeto</h3>
-                        <div>
-                            <p>Linguagens:</p>
-                            <span>HTML</span>
-                            <span>CSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto maxime eligendi dolorem quibusdam quam quo! Modi libero ea voluptatum commodi laboriosam sed sequi dolores cupiditate labore voluptate, beatae earum ad?</p>
-                        <span>Github Code</span>
-                        <span>Aplicação</span>
-                    </li>
-                </ul>
-            </div>
-        </StyledContainer>
-       </StyledProjectsSection>
-    )
-}
+  const [repositories, setRepositories] = useState([]);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/edivinofilho/repos")
+      .then((response) => response.json())
+      .then((data) =>setRepositories(data));
+  }, []);
+
+  return (
+    <StyledProjectsSection>
+      <StyledContainer>
+
+        <StyledIdeaDiv>
+          <h3>Vamos trocar uma idéia?</h3>
+          <p>
+            Se você estiver interessado em explorar como posso contribuir para o
+            seu sucesso ou se simplesmente quiser se conectar e discutir
+            oportunidades interessantes em tecnologia ou segurança cibernética,
+            não hesite em entrar em contato. Vamos embarcar nessa jornada
+            juntos!{" "}
+          </p>
+          <StyledLink href="https://www.linkedin.com" target="_blank">
+            Accessar perfil no LinkedIn
+          </StyledLink>
+        </StyledIdeaDiv>
+
+        <StyledProjectList>
+          <h3>Projetos</h3>
+          <StyledTitle>
+            Originalidade e <span>dedicação</span> em cada detalhe.
+          </StyledTitle>
+
+          <ul>
+            {repositories.map((repository) => {
+              return (
+                <ProjectCard>
+                  <h3>Projeto: {repository.name}</h3>
+                  <div>
+                    <p>Linguagem:</p>
+                    <span>{repository.language}</span>
+                  </div>
+                  <p>
+                    {repository.description}
+                  </p>
+                  <div>
+                    {repository.html_url ? <StyledLink href={repository.html_url} target="_blank">
+                      <i className="fa-brands fa-github fa-lg"></i> GitHub Code
+                    </StyledLink> : null}
+
+                    {repository.homepage ?  <StyledLink href={repository.homepage} target="_blank">
+                      <i className="fa-solid fa-share fa-lg"></i> Aplicação
+                    </StyledLink> : null}                  
+                   
+                  </div>
+                </ProjectCard>
+              );
+            })}
+          </ul>
+        </StyledProjectList>
+      </StyledContainer>
+    </StyledProjectsSection>
+  );
+};

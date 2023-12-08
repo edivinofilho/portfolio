@@ -8,5 +8,7 @@ export const StyledFooter = styled.footer`
     align-items: center;
     justify-content: center;
 
-    background-color: brown;
+    background-color: #333;
+    font-size: 0.8rem;
+    color: #fff;
 `

@@ -1,51 +1,81 @@
 import styled from "styled-components";
 
 export const StyledTechBanner = styled.section`
-    width: 100%;
-    height: 12.5rem;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  width: 100%;
 
-    background-color: tomato;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-export const StyledTitle = styled.h3`
+  padding: 3.125rem 0;
 
-`
+  background-color: var(--color-text-secondary);
+`;
 
 export const StyledDiv = styled.div`
-    width: 80%;
-    max-width: 55rem;
+  width: 80%;
+  max-width: 55rem;
 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-    
-    background-color: pink;
-`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.5rem;
+`;
 
 export const StyledTechContainer = styled.ul`
-    width: 100%;
-    max-width: 55rem;
+  width: 100%;
+  max-width: 55rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 32px;
 
-    background-color: red;
-`
+  padding: 10px 0;
+
+  @media (max-width: 1025px) {
+    /* background-color: blue; */
+    gap: 19.8px;
+  }
+
+  /* background-color: red; */
+`;
 export const StyledCards = styled.li`
-    width: 6.25rem;
-    height: 100px;
+  width: 120px;
+  height: 120px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    background-color: white;
-`
+  /* margin: 0 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: .3125rem;
+
+  background-color: white;
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+`;
+
+export const Tooltip = styled.div`
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #333;
+  font-size: .75rem;
+  color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+`;

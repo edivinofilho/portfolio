@@ -5,7 +5,6 @@ export const ResetStyle = createGlobalStyle`
         box-sizing: 0;
         padding: 0;
         margin: 0;
-        background-color: #D9D9D9;
         font-family: var(--font-primary);
     }
 
@@ -35,5 +34,9 @@ export const ResetStyle = createGlobalStyle`
 
     img {
         max-width: 100%;
+    }
+
+    p {
+      line-height: 1.5;
     }
 `;
