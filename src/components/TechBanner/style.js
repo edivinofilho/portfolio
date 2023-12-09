@@ -37,17 +37,14 @@ export const StyledTechContainer = styled.ul`
   padding: 10px 0;
 
   @media (max-width: 1025px) {
-    /* background-color: blue; */
     gap: 19.8px;
   }
-
-  /* background-color: red; */
 `;
+
 export const StyledCards = styled.li`
   width: 120px;
   height: 120px;
 
-  /* margin: 0 10px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,6 +60,11 @@ export const StyledCards = styled.li`
       visibility: visible;
     }
   }
+
+  @media (max-width: 340px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 export const Tooltip = styled.div`
@@ -70,10 +72,14 @@ export const Tooltip = styled.div`
   bottom: 100%;
   left: 50%;
   transform: translateX(-50%);
+
   padding: 5px;
+  
   background-color: #333;
+  
   font-size: .75rem;
   color: #fff;
+  
   border-radius: 5px;
   opacity: 0;
   visibility: hidden;

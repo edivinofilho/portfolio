@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
     width: 100%;
-    /* background-color: grey; */
 
     display: flex;
     align-items: center;
@@ -19,9 +18,10 @@ export const StyledContainer = styled.div`
 
     padding: 1.3rem 0;
 
-    /* @media(max-width: 340px){
-        flex-direction: column
-    } */
+    @media(max-width: 376px){
+        flex-direction: column;
+        justify-content: center;
+    }
 
 `
 
@@ -35,7 +35,6 @@ export const StyledLogoImg = styled.img`
 
 export const StyledDevDataContainer = styled.div`
     width: 300px;
-    /* background-color: pink; */
 
     display: flex;
     align-items: center;
@@ -45,14 +44,31 @@ export const StyledDevDataContainer = styled.div`
     h1 {
         font-size: 1.4rem;
     }
+
+    @media(max-width: 376px){
+        width: 12.5rem;
+
+        flex-direction: column;
+        justify-content: center;
+
+        margin-bottom: 20px;
+    }
+
+
 `
 
 export const StyledIconsContainer = styled.div`
     width: 300px;
-    /* background-color: blue; */
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
+
+    @media(max-width: 376px){
+        width: 12.5rem;
+
+        justify-content: center;
+
+    }
 `

@@ -3,12 +3,11 @@ import styled from "styled-components";
 export const StyledProjectsSection = styled.main`
   width: 100%;
   padding: 50px 0;
+  margin-bottom: 1.875rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  /* background-color: yellow; */
 `;
 
 export const StyledContainer = styled.div`

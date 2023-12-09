@@ -17,10 +17,11 @@ export const Header = () => {
           <h1>Edivino Filho</h1>
         </StyledDevDataContainer>
         <StyledIconsContainer>
-          <a href="https://www.github.com" target="_blank">
+          <a href="https://github.com/edivinofilho" target="_blank">
             <i className="fa-brands fa-github fa-2xl"></i>
           </a>
-          <a href="https://www.linkedin.com" target="_blank">
+          
+          <a href="https://www.linkedin.com/in/edivinofilho/" target="_blank">
             <i className="fa-brands fa-linkedin fa-2xl"></i>
           </a>
         </StyledIconsContainer>

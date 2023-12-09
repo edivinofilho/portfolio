@@ -11,7 +11,7 @@ export const TechBanner = () => {
   const [isHovered, setHovered] = useState(false);
 
   return (
-    <StyledTechBanner>
+    <StyledTechBanner id="techs">
       <StyledDiv>
         <h3>Principais Technologias que trabalho</h3>
         <StyledTechContainer>
