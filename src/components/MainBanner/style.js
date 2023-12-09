@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const StyledSection = styled.section`
   width: 100%;
-  /* height: 32.5rem; */
 
   padding: 6rem 0;
   display: flex;
@@ -35,8 +34,6 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   gap: 3rem;
 
-  /* background-color: orange; */
-
   div {
     width: 73%;
     display: flex;
@@ -44,9 +41,6 @@ export const StyledContainer = styled.div`
     justify-content: center;
     flex-direction: column;
     gap: 3rem;
-
-    /* background-color: blue; */
-
   }
 `;
 
@@ -56,23 +50,19 @@ export const StyledImage = styled.img`
   right: 30px;
 
   width: 3%;
-
-  /* background-color: green; */
 `;
 
 export const StyledButtonContainer = styled.span`
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2rem;
-
-    /* background-color: red; */
-`
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+`;
 
 export const Button = styled.button`
-  padding: .625rem 1.25rem;
+  padding: 0.625rem 1.25rem;
   font-size: 1rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   background-color: var(--color-text-secondary);
   transition: 0.5s;
 

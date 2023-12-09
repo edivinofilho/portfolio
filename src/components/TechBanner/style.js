@@ -50,7 +50,7 @@ export const StyledCards = styled.li`
   justify-content: center;
   position: relative;
   cursor: pointer;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
 
   background-color: white;
 
@@ -74,12 +74,12 @@ export const Tooltip = styled.div`
   transform: translateX(-50%);
 
   padding: 5px;
-  
+
   background-color: #333;
-  
-  font-size: .75rem;
+
+  font-size: 0.75rem;
   color: #fff;
-  
+
   border-radius: 5px;
   opacity: 0;
   visibility: hidden;

@@ -18,13 +18,9 @@ export const StyledContainer = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   gap: 2rem;
-
-  /* background-color: red; */
 `;
 
 export const StyledIdeaDiv = styled.div`
-  /* background-color: lightgreen; */
-
   width: 32%;
   display: flex;
   align-items: flex-start;
@@ -45,7 +41,7 @@ export const StyledLink = styled.a`
   border-radius: 0.3125rem;
   background-color: #5c940d;
   transition: 0.5s;
-  color: #FFFFFF;
+  color: #ffffff;
   border: 1px solid transparent;
   cursor: pointer;
 
@@ -57,7 +53,6 @@ export const StyledLink = styled.a`
 `;
 
 export const StyledProjectList = styled.ul`
-  /* background-color: blueviolet; */
   width: 60%;
 
   display: flex;
@@ -69,7 +64,6 @@ export const StyledProjectList = styled.ul`
   h3 {
     font-size: 1rem;
   }
-
 
   span {
     color: #5c940d;
@@ -89,6 +83,6 @@ export const StyledProjectList = styled.ul`
 `;
 
 export const StyledTitle = styled.p`
-    font-size: 1.5rem;
-    font-weight: 700;
-`
+  font-size: 1.5rem;
+  font-weight: 700;
+`;

@@ -29,14 +29,14 @@ export const StyledListItem = styled.li`
 export const StyledLink = styled.a`
   background-color: #5c940d;
   transition: 0.5s;
-  color: #FFFFFF;
-  padding: .25rem .375rem;
-  border-radius: .25rem;
+  color: #ffffff;
+  padding: 0.25rem 0.375rem;
+  border-radius: 0.25rem;
 
-  font-size: .875rem;
+  font-size: 0.875rem;
 
   &:hover {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: #5c940d;
   }
 `;
