@@ -13,7 +13,7 @@ export const TechBanner = () => {
   return (
     <StyledTechBanner id="techs">
       <StyledDiv>
-        <h3>Principais Technologias que trabalho</h3>
+        <h3>Principais Tecnologias que trabalho</h3>
         <StyledTechContainer>
           <StyledCards
             onMouseEnter={() => setHovered(true)}

@@ -37,7 +37,7 @@ export const MainBanner = () => {
             </ScrollLink>
 
             <ScrollLink to="techs" smooth={true} duration={500}>
-              <PrimaryButton>Tecnologias</PrimaryButton>
+              <Button>Tecnologias</Button>
             </ScrollLink>
           </StyledButtonContainer>
         </div>

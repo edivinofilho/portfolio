@@ -56,11 +56,12 @@ export const StyledDevDataContainer = styled.div`
 
 export const StyledIconsContainer = styled.div`
   width: 300px;
-
+  height: 50px;
+  
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 30px;
+  gap: 20px;
 
   @media (max-width: 376px) {
     width: 12.5rem;
@@ -68,3 +69,34 @@ export const StyledIconsContainer = styled.div`
     justify-content: center;
   }
 `;
+
+export const StyledGitLogo = styled.span`
+  width: 35px;
+  height: 35px;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-bottom: 2px solid #82c91e;
+  }
+`
+
+export const StyledLinkedInLogo = styled.span`
+  width: 35px;
+  height: 35px;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    border-bottom: 2px solid #82c91e;
+  }
+ 
+`

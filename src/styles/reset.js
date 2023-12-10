@@ -9,7 +9,7 @@ export const ResetStyle = createGlobalStyle`
     }
 
     body {
-        width: 100vw;
+        width: 98vw;
         height: 100vh;
     }
 
